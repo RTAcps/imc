@@ -23,45 +23,45 @@ document.getElementById('imcForm').addEventListener('submit', function(e) {
     // Define variáveis para a mensagem, cor e imagens
     let message = `Seu IMC é ${imc.replace('.', ',')}. `;
     let color = '';
-    let imageHeader = './../../assets/faixas-imc.png';
+    let imageHeader = './../imc/assets/faixas-imc.png';
     let imageFooter = '';
 
     // Determina a classificação do IMC e ajusta a mensagem, cor e imagens correspondentes
     if (imc < 17) {
-        imageHeader = './../../assets/faixas-imc1.png';
+        imageHeader = './../imc/assets/faixas-imc1.png';
         message += 'Você está muito abaixo do peso.';
         color = '#6DB5E8';
-        imageFooter = './../../assets/imc1.png';
+        imageFooter = './../imc/assets/imc1.png';
     } else if (imc >= 17 && imc <= 18.49) {
-        imageHeader = './../../assets/faixas-imc1.png';
+        imageHeader = './../imc/assets/faixas-imc1.png';
         message += 'Você está abaixo do peso.';
         color = '#6DB5E8';
-        imageFooter = './../../assets/imc2.png';
+        imageFooter = './../imc/assets/imc2.png';
     } else if (imc >= 18.5 && imc <= 24.99) {
-        imageHeader = './../../assets/faixas-imc2.png';
+        imageHeader = './../imc/assets/faixas-imc2.png';
         message += 'Você está com o peso normal.';
         color = '#7EC395';
-        imageFooter = './../../assets/imc3.png';
+        imageFooter = './../imc/assets/imc3.png';
     } else if (imc >= 25 && imc <= 29.99) {
-        imageHeader = './../../assets/faixas-imc3.png';
+        imageHeader = './../imc/assets/faixas-imc3.png';
         message += 'Você está com sobrepeso.';
         color = '#DECF54';
-        imageFooter = './../../assets/imc4.png';
+        imageFooter = './../imc/assets/imc4.png';
     } else if (imc >= 30 && imc <= 34.99) {
-        imageHeader = './../../assets/faixas-imc4.png';
+        imageHeader = './../imc/assets/faixas-imc4.png';
         message += 'Você está com obesidade I.';
         color = '#FFA728';
-        imageFooter = './../../assets/imc5.png';
+        imageFooter = './../imc/assets/imc5.png';
     } else if (imc >= 35 && imc <= 39.99) {
-        imageHeader = './../../assets/faixas-imc5.png';
+        imageHeader = './../imc/assets/faixas-imc5.png';
         message += 'Você está com obesidade II.';
         color = '#FC6D40';
-        imageFooter = './../../assets/imc6.png';
+        imageFooter = './../imc/assets/imc6.png';
     } else if (imc >= 40 && imc <= 100) {
-        imageHeader = './../../assets/faixas-imc6.png';
+        imageHeader = './../imc/assets/faixas-imc6.png';
         message += 'Você está com obesidade III.';
         color = '#DE4D55';
-        imageFooter = './../../assets/imc7.png';
+        imageFooter = './../imc/assets/imc7.png';
     } else {
         message += 'Por favor, digite um valor válido!';
     }
@@ -93,7 +93,7 @@ function setResultText(text, color, imgHead, imgFoot) {
         imgHeader.alt = `imagem que indica que ${text}`; 
         imgHeader.style.display = 'block'; 
     } else {
-        imgHeader.src = './../../assets/faixas-imc.png';
+        imgHeader.src = './../imc/assets/faixas-imc.png';
     }
 
     // Atualiza a imagem do rodapé
